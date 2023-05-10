@@ -16,6 +16,8 @@ export const Container = styled.div`
     justify-content: space-between;
     padding-right: 30px;
 
+    
+
     label{
         cursor: pointer;
         position: relative;
@@ -48,6 +50,11 @@ export const Container = styled.div`
 
     input[type="checkbox"]:checked ~ label::after{
         display: none;
+    }
+
+    input[type="checkbox"]:checked ~ label {
+        text-decoration: line-through;
+        color: #5e6569;
     }
 
     .trash{

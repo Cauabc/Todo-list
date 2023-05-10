@@ -18,6 +18,10 @@ export const Container = styled.div`
         margin-top: 1em;
         margin-bottom: 2em;
     }
+
+    @media screen and (max-width:715px){
+        width: 80vw;
+    }
 `
 
 export const UnderInformations = styled.div`

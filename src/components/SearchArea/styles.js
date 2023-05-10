@@ -8,6 +8,10 @@ export const Container = styled.div`
     padding-bottom: 1.4em;
     border-radius: 2px;
 
+    @media screen and (max-width:715px){
+        width: 80vw;
+    }
+
     button{
         font-family: 'Fredoka', sans-serif;
         display: flex;

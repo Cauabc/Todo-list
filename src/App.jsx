@@ -6,7 +6,6 @@ import Task from './components/Task/Task'
 function App() {
   
   const [tasks, setTasks] = useState([])
-  const [completed, setCompleted] = useState([])
   const [completedTasks, setCompletedTasks] = useState(0)
 
   const isTaskNameExists = (name) => {
@@ -28,16 +27,15 @@ function App() {
     
   }
 
-  function removeTodo(index){
-    const newTasks = [...tasks];
-    newTasks.splice(index, 1);
-    setTasks(newTasks);
+  function removeTodo(taskId, index){
+    handleTaskClick(index)
+    setTasks(tasks.filter((task) => task.id !== taskId.id))
   }
 
   function handleTaskClick(taskIndex){
     tasks.map((item, index) => {
       if (index === taskIndex){
-        item.completed = !item.completed
+          item.completed = !item.completed
       } else{
         return item
       }
@@ -52,7 +50,7 @@ function App() {
     <S.Container>
       <h1>TODOLIST</h1>
       <SearchArea handleClickButton={addTask} listTasks={tasks}/>
-      {tasks.map((task, index) => <Task key={index} task={task} index={index} handleOnClick={handleTaskClick} passToUnderInformations={setCompleted} removeTodo={removeTodo}/>)}
+      {tasks.map((task, index) => <Task key={index} task={task} index={index} handleOnClick={handleTaskClick} removeTodo={removeTodo}/>)}
       <S.UnderInformations>
         <h1>Completed: <span>{completedTasks}</span></h1>
         <h1>Total: <span>{tasks.length}</span></h1>
