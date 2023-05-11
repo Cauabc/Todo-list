@@ -11,6 +11,7 @@ export const Container = styled.div`
         letter-spacing: 5px;
         color: #fff;
         font-size:3em;
+        margin: 1em 0;
     }
 
     #SearchTask{
@@ -37,7 +38,7 @@ export const UnderInformations = styled.div`
     justify-content: center;
 
     h1{
-        font-size: 1em;
+        font-size: .9em;
     }
 
     span{

@@ -25,10 +25,18 @@ function SearchArea({handleClickButton}){
         setInputValue("")
     }
 
+    function handleEnter(e){
+        if (e.keyCode === 13 && inputValue){
+            handleClick() 
+        } else {
+            return
+        }
+    }
+
     return(
         <S.Container>
-            <Input placeholder={"Nome da tarefa"} setValueInput={setInputValue} getInputValue={inputValue}/>
-            <button ref={buttonRef} disabled={buttonIsAble} onClick={handleClick}>{<GoPlus/>} Adicionar</button>
+            <Input placeholder={"Nome da tarefa"} setValueInput={setInputValue} keydownEvent={handleEnter} getInputValue={inputValue}/>
+            <button ref={buttonRef} disabled={buttonIsAble} onClick={() => handleClick()}>{<GoPlus/>} Adicionar</button>
         </S.Container>
     )
 }

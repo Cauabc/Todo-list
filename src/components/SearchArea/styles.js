@@ -3,9 +3,10 @@ import { styled } from "styled-components"
 export const Container = styled.div`
     display: flex;
     width: 50vw;
-    gap: 2.6em;
+    gap: .8em;
     border-bottom: 2px solid #c3c3c5;
     padding-bottom: 1.4em;
+    margin-bottom: .7em;
     border-radius: 2px;
 
     @media screen and (max-width:715px){
