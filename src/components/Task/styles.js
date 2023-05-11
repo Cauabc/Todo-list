@@ -16,7 +16,6 @@ export const Container = styled.div`
     justify-content: space-between;
     padding-right: 30px;
 
-    
 
     label{
         cursor: pointer;
@@ -67,9 +66,9 @@ export const Container = styled.div`
 
     .inputChecked{
         position: absolute;
-        width: 13px;
+        width: 14px;
         top: 16px;
-        left: 22px;
+        left: 21px;
         display: none;
     }
 

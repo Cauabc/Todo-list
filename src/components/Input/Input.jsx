@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react'
+import { useRef } from 'react'
 import {InputStyle} from './styles'
 
 function Input({name, id, placeholder, setValueInput, getInputValue, keydownEvent}){
