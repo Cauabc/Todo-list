@@ -62,7 +62,6 @@ function App() {
         <h1>Completed: <span>{completedTasks}</span></h1>
         <h1>Total: <span>{tasks.length}</span></h1>
       </S.UnderInformations>
-      <button onClick={() => console.log(completedTasks)}>cdasdsa</button>
     </S.Container>
   )
 }
