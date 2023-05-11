@@ -28,8 +28,15 @@ function App() {
   }
 
   function removeTodo(taskId, index){
-    handleTaskClick(index)
+    
     setTasks(tasks.filter((task) => task.id !== taskId.id))
+    tasks.map((item) => {
+      if (item.completed === true && item.id === taskId.id){
+        return setCompletedTasks(completedTasks-1)
+      } else {
+        return item
+      }
+    })
   }
 
   function handleTaskClick(taskIndex){
@@ -55,6 +62,7 @@ function App() {
         <h1>Completed: <span>{completedTasks}</span></h1>
         <h1>Total: <span>{tasks.length}</span></h1>
       </S.UnderInformations>
+      <button onClick={() => console.log(completedTasks)}>cdasdsa</button>
     </S.Container>
   )
 }
